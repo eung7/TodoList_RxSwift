@@ -16,6 +16,7 @@
 		E5FBCCCA285A25F30005B9ED /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBCCC9285A25F30005B9ED /* TaskListViewController.swift */; };
 		E5FBCCCD285A260C0005B9ED /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E5FBCCCC285A260C0005B9ED /* RxCocoa */; };
 		E5FBCCCF285A260C0005B9ED /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E5FBCCCE285A260C0005B9ED /* RxSwift */; };
+		E5FBCCD1285A2B840005B9ED /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBCCD0285A2B840005B9ED /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E5D54D8F285A22E600CFA90B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5D54D91285A22E600CFA90B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5FBCCC9285A25F30005B9ED /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		E5FBCCD0285A2B840005B9ED /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E5D54D85285A22E300CFA90B /* SceneDelegate.swift */,
 				E5D54D87285A22E300CFA90B /* ViewController.swift */,
 				E5FBCCC9285A25F30005B9ED /* TaskListViewController.swift */,
+				E5FBCCD0285A2B840005B9ED /* AddTaskViewController.swift */,
 				E5D54D89285A22E400CFA90B /* Main.storyboard */,
 				E5D54D8C285A22E600CFA90B /* Assets.xcassets */,
 				E5D54D8E285A22E600CFA90B /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 				E5FBCCCA285A25F30005B9ED /* TaskListViewController.swift in Sources */,
 				E5D54D84285A22E300CFA90B /* AppDelegate.swift in Sources */,
 				E5D54D86285A22E300CFA90B /* SceneDelegate.swift in Sources */,
+				E5FBCCD1285A2B840005B9ED /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

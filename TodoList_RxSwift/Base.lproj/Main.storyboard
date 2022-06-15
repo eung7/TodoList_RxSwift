@@ -56,7 +56,13 @@
                             <constraint firstItem="Rhd-It-4bg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zm2-mp-Zhw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TodoList" id="GMy-Wh-WQZ"/>
+                    <navigationItem key="navigationItem" title="TodoList" id="GMy-Wh-WQZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YVI-bv-Yyt">
+                            <connections>
+                                <segue destination="APN-IO-2on" kind="presentation" modalPresentationStyle="fullScreen" id="e8v-KJ-hkR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="prioritySegementedControl" destination="Rhd-It-4bg" id="WFI-0L-nts"/>
                         <outlet property="tableView" destination="NwF-0T-zkp" id="mpZ-DV-jm7"/>
@@ -65,6 +71,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="116.51785714285714"/>
+        </scene>
+        <!--Add Task-->
+        <scene sceneID="LY6-SX-dKP">
+            <objects>
+                <viewController id="vMf-MG-wWT" customClass="AddTaskViewController" customModule="TodoList_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pbm-I5-Dbb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z4P-kb-dUW">
+                                <rect key="frame" x="104" y="107" width="206" height="32"/>
+                                <segments>
+                                    <segment title="High"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Low"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9NS-r3-fj1">
+                                <rect key="frame" x="107" y="431" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ZVh-PZ-75V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zDy-tU-U7t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z4P-kb-dUW" firstAttribute="centerX" secondItem="Pbm-I5-Dbb" secondAttribute="centerX" id="AqU-38-E3I"/>
+                            <constraint firstItem="Z4P-kb-dUW" firstAttribute="top" secondItem="zDy-tU-U7t" secondAttribute="top" constant="19" id="Oel-0l-Zlx"/>
+                            <constraint firstItem="9NS-r3-fj1" firstAttribute="centerX" secondItem="Pbm-I5-Dbb" secondAttribute="centerX" id="bD5-sQ-ArD"/>
+                            <constraint firstItem="9NS-r3-fj1" firstAttribute="centerY" secondItem="Pbm-I5-Dbb" secondAttribute="centerY" id="usv-hU-Ed9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Task" id="dHt-jY-dEy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="SfC-2w-iJ0"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="319-oC-3le" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Oof-7K-2Dr">
@@ -83,6 +131,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esw-dA-mAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-48" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qSt-9y-1Mz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="APN-IO-2on" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nTU-IG-QO4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vMf-MG-wWT" kind="relationship" relationship="rootViewController" id="85s-Kf-FYn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgU-eF-zgs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1667" y="117"/>
         </scene>
     </scenes>
     <resources>
