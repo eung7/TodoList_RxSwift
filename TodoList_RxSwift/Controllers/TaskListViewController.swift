@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class TaskListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var prioritySegementedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,15 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskTableViewCell", for: indexPath)
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navC = segue.destination as? UINavigationController,
+              let addTVC = navC.viewControllers.first as? AddTaskViewController else { return }
+        addTVC.taskSubjectObservable
+            .subscribe(onNext: { task in
+                print(task)
+            }).disposed(by: disposeBag)
     }
 }
 
